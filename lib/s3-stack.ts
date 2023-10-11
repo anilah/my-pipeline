@@ -8,6 +8,8 @@ export class s3Stack extends cdk.Stack {
 
     const bucket = new s3.Bucket(this, 'MyPipelineBucket', {
       encryption: s3.BucketEncryption.KMS,
+      
     });
+   
   }
 }
