@@ -21,7 +21,7 @@ export class MyPipelineStack extends cdk.Stack {
    
 
     pipeline.addStage(new MyDevStage(this, "test", {
-     // env: { account: "323619686659", region: "ap-southeast-2" }
+      env: { account: "323619686659", region: "ap-southeast-2" }
     }),{
       pre: [
         new pipelines.ManualApprovalStep('PromoteToDev'),
